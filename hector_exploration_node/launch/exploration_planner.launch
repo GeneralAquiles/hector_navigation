@@ -2,8 +2,7 @@
 
 <launch>
   
-  <!--launch-prefix="gdb -ex run ++args"-->
-
+  launch-prefix="gdb -ex run ++args"a
   <node pkg="hector_exploration_node" type="exploration_planner_node" name="hector_exploration_node" output="screen">
 
     <rosparam file="$(find hector_exploration_node)/config/costmap.yaml" command="load" />

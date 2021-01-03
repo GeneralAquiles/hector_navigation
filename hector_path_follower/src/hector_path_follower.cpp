@@ -41,8 +41,8 @@ namespace pose_follower {
     goal_reached_time_ = ros::Time::now();
     ros::NodeHandle node_private("~/");
 
-    node_private.param("k_trans", K_trans_, 2.0);
-    node_private.param("k_rot", K_rot_, 2.0);
+    node_private.param("k_trans", K_trans_, 1.0);
+    node_private.param("k_rot", K_rot_, 0.1);
 
     node_private.param("tolerance_trans", tolerance_trans_, 0.1);
     node_private.param("tolerance_rot", tolerance_rot_, 0.2);
@@ -52,8 +52,8 @@ namespace pose_follower {
 
     node_private.param("samples", samples_, 10);
 
-    node_private.param("max_vel_lin", max_vel_lin_, 0.9);
-    node_private.param("max_vel_th", max_vel_th_, 1.4);
+    node_private.param("max_vel_lin", max_vel_lin_, 0.3);
+    node_private.param("max_vel_th", max_vel_th_, 1.1);
 
     node_private.param("min_vel_lin", min_vel_lin_, 0.1);
     node_private.param("min_vel_th", min_vel_th_, 0.0);
